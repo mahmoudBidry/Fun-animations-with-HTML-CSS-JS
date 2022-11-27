@@ -1,0 +1,81 @@
+body{
+  background: #000
+}
+
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.box div{
+  position: absolute;
+  top: 0;
+  height: 9px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 25px;
+  background: transparent;
+}
+
+.box div:nth-child(1){
+  transform: rotate(-33deg);
+}
+.box div:nth-child(2){
+  transform: rotate(90deg);
+}
+.box div:nth-child(3){
+  transform: rotate(33deg);
+}
+
+.box div:nth-child(3)::before{
+  content: '';
+  position: relative;
+  top: 0.25px;
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #000;
+  border: 2px solid #fff;
+  animation: ballMove 2s linear infinite;
+}
+
+@keyframes ballMove{
+  0%{
+    left: -20%;
+    top: 10%;
+  }
+  10%{
+    left: 10%;
+    top: -35%;
+  }
+  40%{
+    left: 80%;
+    top: -20%;
+  }
+  50%{
+    left: 98%;
+    top: 18%;
+  }
+  60%{
+    left: 80%;
+    top: 50%;
+  }
+  75%{
+    left: 45%;
+    top: 80%;
+  }
+  90%{
+    left: 0%;
+    top: 60%;
+  }
+  100%{
+    left:-20%;
+    top: 10%;
+  }
+}

@@ -1,0 +1,50 @@
+body{
+	background: rgba(0, 0, 0, 0.4);
+	margin: 0;
+	padding: 0;
+}
+
+.textBox{
+	position: absolute;
+	top:45%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	display: inline-block;
+	transform: rotateY(35deg);
+	transition: all .5s linear;
+}
+
+.textBox span{
+	background: #fff;
+	width: 70px;
+	height: 70px;
+	line-height: 150%;
+	font-family: Arial;
+	font-weight: 900;
+	font-size: 40px;
+	float: left;
+	transition:  all .5s linear;
+}
+
+.textBox span{
+	box-shadow: 0 70px 20px rgba(0, 0, 0, 0.1);
+}
+
+.textBox span:nth-child(odd){
+	transform: skewY(-16deg);
+	color:#ff0000;
+}
+
+.textBox span:nth-child(even){
+	transform: skewY(16deg);
+	color: #000;
+}
+
+.textBox:hover{
+	transform: rotateY(0deg);
+}
+
+.textBox:hover span{
+	transform: skewY(0deg);
+}

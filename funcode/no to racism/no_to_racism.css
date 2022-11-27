@@ -1,0 +1,26 @@
+body{
+	min-height: 100vh;
+	background: #000;
+	position: fixed;
+}
+
+.box{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: url(no_to_racism.jpg);
+	background-size: cover;
+	clip-path: circle(140px at var(--x) var(--y));
+}
+.box:active{
+	clip-path: circle(250px at var(--x) var(--y));
+}
+h2{
+	color: #fff;
+	position: fixed;
+	mix-blend-mode: multiply;
+	user-select: none;
+	margin-left: 15%;
+	margin-top: 15%;
+	font-size: 7em;
+}

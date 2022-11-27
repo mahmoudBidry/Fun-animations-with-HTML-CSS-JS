@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+  <div id="box">
+    <button id="button">Change color</button>
+  </div>
+  <script type="text/javascript">
+    var div = document.getElementById("box")
+    var button = document.getElementById("button")
+
+    function getRandomInt(max){
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    function rgb(){
+      let red = getRandomInt(255);
+      let green = getRandomInt(255);
+      let blue = getRandomInt(255);
+      return "rgb("+red+", "+green+", "+blue+")";
+    }
+    button.addEventListener("click", function(){
+      div.style.backgroundColor=rgb();
+      color=rgb();
+      button.style.color=color;
+      button.style.borderColor=color;
+    })
+  </script>
+</body>
+</html>

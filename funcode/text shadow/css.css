@@ -1,0 +1,24 @@
+body{
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 100vh;
+	background: #f2f2f2;
+}
+
+.box{
+	position: relative;
+	color: #fff;
+	letter-spacing: -3px;
+	text-shadow: -15px 5px 20px #bfbfbf;
+	font-family: 'lato';
+	font-size: 100px;
+	transform: skew(20deg);
+	transition: all 1s cubic-bezier(.27, 1.84, .94, 1.02)
+}
+
+.box:hover{
+	text-shadow: -15px 5px 20px #b3b3b3;
+}

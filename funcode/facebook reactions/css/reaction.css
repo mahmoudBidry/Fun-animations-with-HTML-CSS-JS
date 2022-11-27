@@ -1,0 +1,224 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+.main{
+  margin-left:40%;
+  margin-top: 16%;
+  height:60px;
+  width:70px;
+  border-radius: 10px;
+}
+
+.facebook-emoji{
+  padding-top: 15px;
+  padding-left: 20px;
+}
+.like-btn{
+  font-weight: 900;
+  font-size: 20px;
+  color:#5655a0;
+  position: relative;
+  cursor: pointer;
+}
+
+.like-btn:hover{
+  text-decoration: underline;
+}
+
+.like-btn-default{
+  background-image: url(../images/like_default.png);
+}
+.btn-emoji{
+  display:block;
+  width:30px;
+  height: 30px;
+}
+
+.emojis-box{
+  height:44px;
+  width:340px;
+  padding: 10px;
+  position: absolute;
+  top:-63px;
+  left:-14px;
+  border-radius:  44px 44px;
+  box-shadow: 1px 1px 2px #cccccc,
+              -1px 0 2px #eeeeee;
+  display: none;
+}
+
+.emoji{
+  list-style-type: none;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top:8px;
+  opacity: 0;
+  transform: scale(1.1);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-btn:hover .emojis-box{
+  display: block;
+}
+
+.emoji-like{
+  left:10px;
+  transition-delay: 0s;
+  background-image: url("../images/reactions_like.png");
+}
+
+.emoji-love{
+  left:68px;
+  transition-delay: .05s;
+   background-image: url("../images/reactions_love.png");
+}
+
+.emoji-haha{
+    left:126px;
+    transition-delay: .1s;
+    background-image: url("../images/reactions_haha.png");
+}
+
+.emoji-wow{
+    left:184px;
+    transition-delay: .15s;
+    background-image: url("../images/reactions_wow.png");
+}
+
+.emoji-sad{
+    left:242px;
+    transition-delay: .2s;
+    background-image: url("../images/reactions_sad.png");
+}
+.emoji-angry{
+    left:300px;
+    transition-delay: .25s;
+    background-image: url("../images/reactions_angry.png");
+}
+
+.like-btn:hover .emoji{
+  opacity: 1;
+  animation-name: emoji_delay;
+  animation-duration: .5s;
+}
+
+@keyframes emoji_delay{
+  0%{
+    width:48px;
+    height: 48px;
+    top:60px;
+  }
+  50%{
+    width:56px;
+    height: 56px;
+    top:5px;
+  }
+  100%{
+    width:48px;
+    height: 48px;
+    top:8px;
+  }
+}
+
+.like-btn:hover .emoji-like{
+  animation-delay: 0s;
+}
+.like-btn:hover .emoji-love{
+  animation-delay: .05s;
+}
+.like-btn:hover .emoji-haha{
+  animation-delay: .1s;
+}
+.like-btn:hover .emoji-wow{
+  animation-delay: .15s;
+}
+.like-btn:hover .emoji-sad{
+  animation-delay: .2s;
+}
+.like-btn:hover .emoji-angry{
+  animation-delay: .25s;
+}
+
+.emoji:hover{
+  transform: scale(1.3,1.3);
+  top: 2px;
+}
+
+.emoji::before{
+  color:#fff;
+  text-align: center;
+  line-height: 17px;
+  font-size:.7em;
+  width:80%;
+  height: 17px;
+  margin-left: 10%;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 20px;
+  position: absolute;
+  top:-25px;
+  opacity: 0;
+}
+
+.emoji:hover::before{
+  opacity: 1;
+}
+
+.emoji-like::before{
+  content: 'Like';
+}
+
+.emoji-love::before{
+  content: 'Love';
+}
+
+.emoji-haha::before{
+  content: 'Haha';
+}
+
+.emoji-angry::before{
+  content: 'Angry';
+}
+
+.emoji-sad::before{
+  content: 'Sad';
+}
+.emoji-wow::before{
+  content: 'Wow';
+}
+/* javascript*/
+.like-btn-like{
+  background-image: url("../images/reactions_like2.png");
+}
+.like-btn-love{
+  background-image: url("../images/reactions_love2.png");
+}
+.like-btn-haha{
+  background-image: url("../images/reactions_haha2.png");
+}
+.like-btn-wow{
+  background-image: url("../images/reactions_wow2.png");
+}
+.like-btn-sad{
+  background-image: url("../images/reactions_sad2.png");
+}
+.like-btn-angry{
+  background-image: url("../images/reactions_angry2.png");
+}
+
+.name-text-like{
+  color:rgb(88,144,255);
+}
+.name-text-love{
+  color: rgb(242,82,104);
+}
+.name-text-angry{
+  color:rgb(247,113,75);
+}
+.name-text-wow, .name-text-haha, .name-text-sad{
+  color:rgb(240,186,21);
+}

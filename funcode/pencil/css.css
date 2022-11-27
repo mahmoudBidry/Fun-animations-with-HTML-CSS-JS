@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.circle{
+	position: absolute;
+	top:20%;
+	left:30%;
+	height: 313px;
+	width: 313px;
+	border: 5px solid transparent;
+	border-right-color: #000;
+	border-top-color: #000;
+	border-radius: 50%;
+	animation: rotate 5s linear infinite;
+}
+.circle img{
+	width: 310px;
+	transform: rotate(75deg) translateX(21%) translateY(7%)
+}
+
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}

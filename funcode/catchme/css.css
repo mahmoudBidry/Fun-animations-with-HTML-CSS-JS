@@ -1,0 +1,21 @@
+body{
+	background-color: #000;
+}
+
+#Mydiv{
+	border-radius: 50%;
+	max-width: max-content;
+	cursor: pointer;
+	position: absolute;
+	top:20%;
+	left:40%;
+	transition:  500ms ease-out
+}
+
+#Mydiv:hover{
+	transform: scale(1.2);
+}
+
+#Mydiv img{
+	width:100px;
+}

@@ -1,0 +1,48 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background: #444;
+}
+.box{
+	width:300px;
+	height: 400px;
+	position: absolute;
+	top:20%;
+	left:35%;
+	background: #333;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.box .boxText{
+	position: relative;
+	margin-top: 55%;
+}
+
+.box .boxText h3{
+	color:#a7a7a7;
+	text-align: center;
+	transition: .4s;
+}
+
+.box:hover{
+	cursor: url('new-emoji.png'), auto;
+	box-shadow: inset 0 0 60px whitesmoke,
+				inset 20px 0 80px #00CC66,
+				inset -20px 0 80px #00e673,
+				inset 20px 0 300px #00FF80,
+				inset -20px 0 300px #1aff8c,
+				0 0 50px #33ff99,
+				-10px 0 80px #4dffa6;
+
+}
+
+.box:active{
+	cursor: url('new-emoji2.png'), auto;
+}
+
+.box:hover h3{
+	color:#fff;
+	font-size: 30px;
+}

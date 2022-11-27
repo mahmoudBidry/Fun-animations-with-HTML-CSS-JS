@@ -1,0 +1,38 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+body{
+  background: #ccc;
+}
+
+.box{
+  margin-left: 25%;
+  margin-top: 15%;
+}
+
+.image{
+  position: relative;
+  overflow: hidden;
+  margin: 1%;
+  max-width: 350px;
+  height: 220px;
+  width: 100%;
+  display: inline-block;
+}
+
+.image img{
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top:0;
+  filter: grayscale(200%);
+  transition: all 2s linear;
+  cursor: pointer;
+}
+
+.image:hover img{
+  transform: translateX(130px);
+  filter: grayscale(0%);
+}

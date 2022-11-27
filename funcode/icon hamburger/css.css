@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #000;
+}
+
+.hamberger{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 65px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.hamberger div{
+	width: 65px;
+	height: 9px;
+	background: #fff;
+	border-radius: 10px;
+	margin-top: 6px;
+	transition: all .7s cubic-bezier(.27, 1.84, .94, 1.02);
+}
+
+.hamberger:hover div:nth-child(2){
+	opacity: 0;
+}
+
+.hamberger:hover div:nth-child(1){
+	transform: rotate(135deg) translateX(45%);
+	margin-left: 15px;
+}
+
+.hamberger:hover div:nth-child(3){
+	transform: rotate(45deg) translateX(-15%);
+}

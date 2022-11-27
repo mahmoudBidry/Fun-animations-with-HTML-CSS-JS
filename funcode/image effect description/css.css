@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+  background: #ccc;
+}
+
+.Box{
+  font-family: Arial;
+  color:#fff;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 3%;
+  max-width: 310px;
+  background-color: #07090c;
+  perspective: 50em;
+  display: inline-block;
+}
+
+.Box *{
+  box-sizing: border-box;
+  transition: all .6s linear;
+}
+
+.Box img{
+  opacity: 1;
+  width: 100%;
+  transform-origin: 0% 100%;
+  box-shadow: 10px 10px 15px #000;
+}
+
+.Box .textBox{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    transform: rotateX(-90deg);
+    transform-origin: 50% -50%;
+    z-index: 1;
+    opacity: 0;
+    padding: 20px 30px;
+}
+
+.Box h3, .Box p{
+  line-height: 1.5em;
+}
+
+.Box h3{
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.Box p{
+    font-size: 0.8em;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.Box:hover img{
+  transform: rotateX(90deg);
+}
+
+.Box:hover .textBox{
+  transform: rotateX(0deg);
+  opacity: 1;
+  transition-delay: .2s;
+}

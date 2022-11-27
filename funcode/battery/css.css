@@ -1,0 +1,53 @@
+body{
+	background: #000;
+}
+
+.battery{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 60px;
+	border: 5px solid #fff;
+	border-radius: 10px;
+}
+
+.battery::before{
+	content: '';
+	position: absolute;
+	left: 100%;
+	top: 25%;
+	width: 15px;
+	height: 30px;
+	background: #fff;
+	border-radius: 5px;
+}
+.battery::after{
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	height: 52px;
+	animation: animate 7s linear forwards;
+}
+
+@keyframes animate{
+	0%{
+		width: 0%;
+		background: red;
+	}
+	25%{
+		width: 30%;
+	}
+
+	50%{
+		width: 60%;
+		background: yellow;
+	}
+
+	100%{
+		width: 97%;
+		background: green;
+	}
+}

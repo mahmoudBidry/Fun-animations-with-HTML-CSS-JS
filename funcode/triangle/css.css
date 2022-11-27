@@ -1,0 +1,41 @@
+body{
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	background-color: #000;
+	overflow: hidden;
+	height: 100vh;
+}
+
+.shadow{
+	filter: drop-shadow(10px 10px 200px #fff)
+			drop-shadow(-10px -10px 50px #fff);
+}
+
+.triangle1{
+	width: 30vw;
+	height: 30vw;
+	background: #cc0000;
+	transform: rotate(0deg);
+	clip-path: polygon(100% -100%, -100% -100%, 100% 300%);
+	transition: all 2s ease;
+}
+
+.triangle1:hover{
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	transform: rotate(360deg);
+	cursor: pointer;
+}
+
+.triangle2{
+	width: calc(30vw - 30px);
+	height: calc(30vw - 30px);
+	background-color: #122436;
+	padding-left: 28px;
+	padding-top: 25px;
+	filter: blur(110px);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+}

@@ -1,0 +1,67 @@
+#monstre{
+    position: absolute;
+    top:33%;
+    left:50%;
+    background-color: transparent;
+    background-image: url(spritesheet.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 475px;
+    height: 470px;
+    transform: translate(-50%, -45%);
+    margin: 2em auto;
+    animation: fly 1s steps(11) infinite;
+}
+
+#box{
+    position: absolute;
+    width: 470px;
+    height: 400px;
+    top:10%;
+    left:65%;
+    animation: move 14s linear infinite;
+}
+
+@keyframes fly{
+    100%{
+        background-position: -5225px, 0;
+    }
+}
+
+@keyframes move{
+    0%{
+        left:65%;
+        transform: rotateY(0deg);
+        top:10%;
+    }
+    10%,20%,30%,40%{
+        top:15%;
+    }
+    15%,25%,35%,45%{
+        top:10%;
+    }
+    50%{
+        top:15%;
+        left:-2.5%;
+        transform: rotateY(0deg);
+    }
+
+    51%{
+        transform: rotateY(180deg);
+    }
+    55%,65%,75%,85%,95%{
+        top:10%;
+    }
+    60%,70%,80%,90%{
+        top:15%;
+    }
+    99%{
+        left:65%;
+        transform: rotateY(180deg);
+    }
+    100%{
+        top:15%;
+        left:65%;
+        transform: rotate(0deg);
+    }
+}

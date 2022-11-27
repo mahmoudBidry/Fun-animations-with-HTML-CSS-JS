@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.imageBox{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.imageBox img{
+  max-width: 100%;
+}
+
+.imageBox .textBox{
+  position: absolute;
+  top: 50%;
+  left:20px;
+  right: 20px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.imageBox:after{
+  background: #fff;
+  position: absolute;
+  display: block;
+  top:20px;
+  bottom: 20px; 
+  left:20px;
+  right: 20px;
+  content: '';
+  transform: rotateX(-270deg);
+  opacity: 0;
+  transition:  all .5s cubic-bezier(.97, .99, 0, 0)
+}
+
+.imageBox:hover .textBox{
+  transform: translateY(-50%);
+  opacity: 1;
+  transition-delay: .3s;
+}
+
+.imageBox:hover:after{
+  transform: rotateX(0deg);
+  opacity: 1;
+}

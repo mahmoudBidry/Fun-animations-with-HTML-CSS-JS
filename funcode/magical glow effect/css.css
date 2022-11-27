@@ -1,0 +1,43 @@
+body{
+  background: #000;
+}
+
+.glow{
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: url(image.png);
+  background-size: cover;
+  animation: animate 14s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    transform: scale(1.5) rotate(0deg);
+    filter: brightness(150%) saturate(50%)
+            hue-rotate(0deg) opacity(100%);
+  }
+  25%{
+    transform: scale(.8) rotate(180deg);
+    filter: brightness(100%) saturate(50%)
+            hue-rotate(50deg) opacity(100%);
+  }
+  50%{
+    transform: scale(1.5) rotate(180deg);
+    filter: brightness(100%) saturate(100%)
+            hue-rotate(0deg) opacity(100%);
+  }
+  75%{
+    transform: scale(.8) rotate(270deg);
+    filter: brightness(100%) saturate(50%)
+            hue-rotate(50deg) opacity(100%);
+  }
+  100%{
+    transform: scale(1.5) rotate(360deg);
+    filter: brightness(150%) saturate(100%)
+            hue-rotate(0deg) opacity(100%);
+  }
+}
